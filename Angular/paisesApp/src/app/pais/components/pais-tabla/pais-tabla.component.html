@@ -14,7 +14,7 @@
             <td>
                 <img class="small-flag" [src]="item.flags.png">
             </td>
-            <td>{{item.name.common}}</td>
+            <td>{{item.capital}},{{item.name.common}}</td>
             <td>{{item.population | number}}</td>
             <td>
                 <a [routerLink]="['/pais',item.flag]">ver...</a>

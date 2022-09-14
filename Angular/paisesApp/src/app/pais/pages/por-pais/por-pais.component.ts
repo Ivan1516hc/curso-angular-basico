@@ -14,18 +14,20 @@ export class PorPaisComponent {
   hayError: boolean=false;
   paises: Country[]=[];
 
-  buscar(){
+  buscar(termino:string){
     this.hayError=false;
-    console.log(this.termino)
+    this.termino = termino;
 
     this.paisServices.buscarPais(this.termino).subscribe(pais => {
       this.paises=pais;
 
     }, (err)=>{
       this.hayError=true;  
+      this.paises=[];
     });
-
-    
-
+  }
+  sugerencias(termino:String){
+    this.hayError=false;
+    //TODO: crear Sugerencias
   }
 }
